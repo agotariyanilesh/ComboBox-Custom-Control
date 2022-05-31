@@ -7,12 +7,24 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ComboBoxComponent implements OnInit {
-  constructor() {}
+  constructor() {
+    //this.loadDataString(this.listItems);
+    this.loadDataKeyValue(this.source);
+  }
 
   ngOnInit() {}
 
   public IsAllowCustom = true;
   public IsFilterable = false;
+
+  public source: Array<{ text: string; value: number }> = [
+    { text: 'Small', value: 1 },
+    { text: 'Medium', value: 2 },
+    { text: 'Large', value: 3 },
+  ];
+
+  public comboData: Array<{ text: string; value: any }>;
+
   public listItems: Array<string> = [
     'Baseball',
     'Basketball',
@@ -26,5 +38,16 @@ export class ComboBoxComponent implements OnInit {
 
   public valueChange(value: any): void {
     console.log(value);
+  }
+
+  public loadDataString(data: Array<string>): void {
+    this.comboData = data.map((val) => ({
+      text: val,
+      value: val,
+    }));
+  }
+
+  public loadDataKeyValue(data: Array<{ text: string; value: any }>): void {
+    this.comboData = data.slice();
   }
 }

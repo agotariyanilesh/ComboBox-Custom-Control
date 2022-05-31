@@ -1,7 +1,9 @@
 <div style="display:flex; position: relative;">
   <kendo-combobox
+    [data]="comboData"
+    textField="text"
+    valueField="value"
     [filterable]="IsFilterable"
-    [data]="listItems"
     (valueChange)="valueChange($event)"
     [allowCustom]="IsAllowCustom"
   >
