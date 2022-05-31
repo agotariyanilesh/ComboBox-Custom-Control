@@ -11,7 +11,7 @@ export class ComboBoxComponent implements OnInit {
   ngOnInit() {}
 
   public IsAllowCustom = true;
-  public IsFilterable = true;
+  public IsFilterable = false;
   public listItems: Array<string> = [
     'Baseball',
     'Basketball',
