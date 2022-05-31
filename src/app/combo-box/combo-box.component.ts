@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-combo-box',
   templateUrl: './combo-box.component.html',
   styleUrls: ['./combo-box.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ComboBoxComponent implements OnInit {
   constructor() {}
