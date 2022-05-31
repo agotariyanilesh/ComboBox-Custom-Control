@@ -1,0 +1,12 @@
+<div style="display:flex; position: relative;">
+  <kendo-combobox
+    [filterable]="IsFilterable"
+    [data]="listItems"
+    (valueChange)="valueChange($event)"
+    [allowCustom]="IsAllowCustom"
+  >
+  </kendo-combobox>
+  <div style="width: 10px; color:black; font-size: 25px; margin-left: 5px;; ">
+    +
+  </div>
+</div>

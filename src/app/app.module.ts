@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { ComboBoxComponent } from './combo-box/combo-box.component';
 
 @NgModule({
   imports: [
@@ -21,13 +22,9 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
     DropDownsModule,
     LabelModule,
     InputsModule,
-    ButtonsModule
+    ButtonsModule,
   ],
-  declarations: [
-    AppComponent
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+  declarations: [AppComponent, ComboBoxComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
